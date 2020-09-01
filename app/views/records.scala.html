@@ -1,0 +1,19 @@
+@()
+
+@main("Yeezy") {
+    <h1>Kanye's Greatest Hits!</h1>
+
+    <form method="get" action ="getHits">
+        Name: <input type="text" name="songName"/>
+            <br/>
+        Year Released: <input type="number" name="yearReleased"/>
+            <br/>
+        Album: <input type="text" name="album"/>
+            <br/>
+        Charted USA#: <input type="number" name="chartedUSA"/>
+            <br/>
+        Fact: <input type="text" name="fact"/>
+            <br/>
+        <input type="submit"/>
+    </form>
+}
