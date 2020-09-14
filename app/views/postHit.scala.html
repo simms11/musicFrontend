@@ -1,0 +1,19 @@
+@()
+
+@main("Yesus") {
+  <h1> Kanye's Greatest Hits!</h1>
+  <h2>Post Hit</h2>
+  <form method="get" action ="postHit">
+    Name: <input type="text" name="songName"/>
+      <br/>
+    Year Released: <input type="number" name="yearReleased"/>
+      <br/>
+    Album: <input type="text" name="album"/>
+      <br/>
+    Charted USA#: <input type="number" name="chartedUSA"/>
+      <br/>
+    Fact: <input type="text" name="fact"/>
+      <br/>
+   <button class="getSongs">Add Songs</button>
+  </form>
+}
