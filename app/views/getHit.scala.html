@@ -1,8 +1,22 @@
-@()
+@import helper._
+@import play.api.data._
+@import play.api.data.Forms._
+@import play.api.data.validation.Constraints._
+@import models.Hit._
+
+@(form: Form[Hit])(implicit request: RequestHeader,
+        messagesProvider: MessagesProvider)
 
 @main("Yeezy") {
     <h1>Kanye's Greatest Hits!</h1>
-    <h2>Get Hit</h2>
+    <h2>Create Hit</h2>
+        @helper.form(action = routes.HitsController.addHit()) {
+            @helper.inputText(form("id"))
+            @helper.inputText(form("name"))
+            @helper.inputText(form("yearReleased"))
+            @helper.inputText(form("album"))
+            @helper.inputText(form("chartedUSA"))
+            @helper.inputText(form("fact"))
+        }
 
-        <button class="getHits">Get Hits</button>
 }
